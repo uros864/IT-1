@@ -41,7 +41,13 @@ knapper.forEach(knapp => {
         let valgtProdukt = produkter.find(produkt => produkt.id === id);
         
         
-        console.log(valgtProdukt?.navn);
+        handlekurv.push(valgtProdukt)
+        
+        document.getElementById("antallKurv").textContent =
+        handlekurv.length;
+
+        console.log(handlekurv);
+        
 
     });
 
