@@ -31,8 +31,29 @@ const produkter = [
 }
 ];
 let handlekurv = [];
-
+const kurvPopup = document.getElementById("kurvPopup");
+const kurvKnapp = document.getElementById("kurvKnapp");
+const lukkKurv = document.getElementById("lukkKurv");
 const knapper = document.querySelectorAll(".kjopKnapp");
+
+function visHandlekurv() {
+
+    const liste = document.getElementById("kurvListe");
+    let total = 0;
+    liste.innerHTML = "";
+
+    for (let produkt of handlekurv) {
+        total = total +produkt.pris;
+
+        liste.innerHTML += `
+            <p>
+                ${produkt.navn} - ${produkt.pris} kr
+            </p>
+        `;
+}
+}
+
+
 knapper.forEach(knapp => {
 
     knapp.addEventListener("click", () => {
@@ -47,8 +68,27 @@ knapper.forEach(knapp => {
         handlekurv.length;
 
         console.log(handlekurv);
-        
+
+});
+
+
 
     });
 
+kurvKnapp.addEventListener("click", () => {
+    const kurvPopup = document.getElementById("kurvPopup");
+
+    visHandlekurv();
+
+    kurvPopup.style.display = "flex";
+
 });
+lukkKurv.addEventListener("click", () => {
+    const lukkKurv = document.getElementById("lukkKurv");
+    console.log(ewijv);
+    
+   document.getElementById("lukkKurv").style.display = "none";
+
+});
+
+

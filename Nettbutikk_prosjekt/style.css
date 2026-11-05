@@ -94,9 +94,18 @@ h1{
     text-align: center;
 }
 #antallKurv{
-    color: rgb(209, 9, 9);
-    margin-top: 1vw;
-    position:fixed;
+    display: flex;
+    font-size: 1vw;
+    background-color: rgb(240, 200, 0);
+    border-radius: 50%;
+    margin-left: -0.5vw;
+    margin-top: -0.5vw;
+    width: 1.2vw;
+    height: 1.2vw;
+    display: inline-block;
+    position: absolute;
+    padding: auto;
+
 }
 #kurvKnapp{
     background-color: rgb(0,0,0,0);
@@ -106,6 +115,10 @@ h1{
 }
 #kurvKnapp img{
     width: 2vw;
+}
+#kurvKnapp:hover{
+    background-color: rgba(6, 6, 6, 0.166);
+    border-radius: 20%;
 }
 .kjopKnapp{
     background-color: rgb(44, 111, 211);
@@ -118,4 +131,25 @@ h1{
 }
 .kjopKnapp:hover{
     background-color: rgb(52, 99, 170);
+}
+
+.popup {
+    display:none;
+
+    position: fixed;
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    justify-content: center;
+    align-items: center;
+}
+
+.kurvInnhold {
+    background-color: white;
+    padding: 25px;
+    width: 400px;
+    max-width: 90%;
+
+    border-radius: 10px;
 }
