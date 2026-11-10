@@ -31,9 +31,10 @@ const produkter = [
 }
 ];
 let handlekurv = [];
+const lukkKurv = document.getElementById("lukkKurv");
 const kurvPopup = document.getElementById("kurvPopup");
 const kurvKnapp = document.getElementById("kurvKnapp");
-const lukkKurv = document.getElementById("lukkKurv");
+
 const knapper = document.querySelectorAll(".kjopKnapp");
 
 function visHandlekurv() {
@@ -76,19 +77,14 @@ knapper.forEach(knapp => {
     });
 
 kurvKnapp.addEventListener("click", () => {
-    const kurvPopup = document.getElementById("kurvPopup");
-
     visHandlekurv();
-
-    kurvPopup.style.display = "flex";
+    document.getElementById("kurvPopup").style.display = "flex";
 
 });
+
 lukkKurv.addEventListener("click", () => {
-    const lukkKurv = document.getElementById("lukkKurv");
-    console.log(ewijv);
-    
-   document.getElementById("lukkKurv").style.display = "none";
-
+    kurvPopup.style.display = "none";
 });
+
 
 

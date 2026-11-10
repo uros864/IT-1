@@ -116,6 +116,9 @@ h1{
 #kurvKnapp img{
     width: 2vw;
 }
+#lukkKurv{
+    background-color: rgba(0, 0, 0, 0.295);
+}
 #kurvKnapp:hover{
     background-color: rgba(6, 6, 6, 0.166);
     border-radius: 20%;
@@ -152,4 +155,7 @@ h1{
     max-width: 90%;
 
     border-radius: 10px;
+}
+#kurvPopup{
+    display: none;
 }
