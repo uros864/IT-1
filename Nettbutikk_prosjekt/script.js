@@ -84,23 +84,27 @@ const lukkKurv = document.getElementById("lukkKurv");
 const kurvPopup = document.getElementById("kurvPopup");
 const kurvKnapp = document.getElementById("kurvKnapp");
 const knapper = document.querySelectorAll(".kjopKnapp");
+const liste = document.getElementById("kurvListe");
 
 function visHandlekurv() {
 
-    const liste = document.getElementById("kurvListe");
+
     let total = 0;
-    liste.innerHTML = "";
+
 
     for (let produkt of handlekurv) {
         total = total +produkt.pris;
 
         liste.innerHTML += `
             <p>
-                ${produkt.navn} - ${produkt.pris} kr
+                ${produkt.navn} - ${produkt.pris} kr  <button class="fjernKnapp">Fjern</button>
             </p>
         `;
+    document.getElementById("totalPris").textContent =
+        "Totalt: " + total + " kr";
 }
 }
+
 knapper.forEach(knapp => {
     knapp.addEventListener("click", () => {
         let id = Number(knapp.dataset.id);
@@ -128,6 +132,7 @@ kurvKnapp.addEventListener("click", () => {
 lukkKurv.addEventListener("click", () => {
     kurvPopup.style.display = "none";
 });
+
 
 
 
